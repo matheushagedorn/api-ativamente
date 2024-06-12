@@ -1,10 +1,10 @@
-package br.univille.autostock;
+package br.univille.ativamente;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AutostockApplicationTests {
+class ativamenteApplicationTests {
 
 	@Test
 	void contextLoads() {
