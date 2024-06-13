@@ -2,11 +2,11 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Spring Boot-AutostockApplication<Autostock>",
+      "name": "Spring Boot-ativamenteApplication<ativamente>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "mainClass": "br.univille.AutostockApplication",
-      "projectName": "Autostock",
+      "mainClass": "br.univille.ativamenteApplication",
+      "projectName": "ativamente",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     },
