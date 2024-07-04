@@ -1,0 +1,132 @@
+### Listar todos os usuários
+GET http://localhost:8080/usuarios
+Content-Type: application/json
+
+### Obter um usuário pelo ID
+GET http://localhost:8080/usuarios/1
+Content-Type: application/json
+
+### Criar um novo usuário
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+    "nome": "João Silva",
+    "email": "joao@example.com",
+    "telefone": "123456789",
+    "bairro": "Centro",
+    "cidade": "São Paulo",
+    "rua": "Rua das Flores",
+    "tipoResidencia": "casa",
+    "idade": 30,
+    "numeroResidencia": "123",
+    "pontoReferencia": "Perto do mercado"
+}
+
+### Atualizar um usuário
+PUT http://localhost:8080/usuarios/1
+Content-Type: application/json
+
+{
+    "nome": "João da Silva",
+    "email": "joaosilva@example.com",
+    "telefone": "987654321",
+    "bairro": "Novo Centro",
+    "cidade": "São Paulo",
+    "rua": "Avenida das Árvores",
+    "tipoResidencia": "apartamento",
+    "idade": 31,
+    "numeroResidencia": "321",
+    "pontoReferencia": "Ao lado da padaria"
+}
+
+### Deletar um usuário
+DELETE http://localhost:8080/usuarios/1
+Content-Type: application/json
+
+### Listar todos os Evento
+GET http://localhost:8080/evento
+Content-Type: application/json
+
+### Obter um Evento pelo ID
+GET http://localhost:8080/evento/1
+Content-Type: application/json
+
+### Criar um novo Evento
+POST http://localhost:8080/evento
+Content-Type: application/json
+
+{
+    "nomeEvento": "Nome do Evento",
+    "descricaoEvento": "Descrição detalhada do evento.",
+    "dataEvento": "2024-07-15T10:00:00Z",
+    "localizacaoEvento": {
+        "endereco": "Rua Exemplo, 123",
+        "cidade": "Cidade Exemplo",
+        "estado": "Estado Exemplo",
+        "pais": "País Exemplo",
+        "codigoPostal": "12345-678"
+    },
+    "organizadorEvento": {
+        "nomeOrganizador": "Nome do Organizador",
+        "emailOrganizador": "organizador@exemplo.com",
+        "telefoneOrganizador": "+55 11 1234-5678"
+    },
+    "participantes": [
+        {
+            "idParticipante": "11111",
+            "nomeParticipante": "Nome do Participante 1",
+            "emailParticipante": "participante1@exemplo.com"
+        },
+        {
+            "idParticipante": "22222",
+            "nomeParticipante": "Nome do Participante 2",
+            "emailParticipante": "participante2@exemplo.com"
+        }
+    ]
+}
+
+
+### Atualizar um Evento
+PUT http://localhost:8080/evento/1
+Content-Type: application/json
+
+{
+    "nomeEvento": "Novo Nome do Evento",
+    "descricaoEvento": "Nova descrição detalhada do evento.",
+    "dataEvento": "2024-07-16T11:00:00Z",
+    "localizacaoEvento": {
+        "endereco": "Nova Rua Exemplo, 456",
+        "cidade": "Nova Cidade Exemplo",
+        "estado": "Novo Estado Exemplo",
+        "codigoPostal": "98765-432"
+    },
+    "organizadorEvento": {
+        "idOrganizador": "67891",
+        "nomeOrganizador": "Novo Nome do Organizador",
+        "emailOrganizador": "novoorganizador@exemplo.com",
+        "telefoneOrganizador": "+55 11 8765-4321"
+    },
+    "participantes": [
+        {
+            "idParticipante": "11111",
+            "nomeParticipante": "Nome do Participante 1",
+            "emailParticipante": "participante1@exemplo.com"
+        },
+        {
+            "idParticipante": "22222",
+            "nomeParticipante": "Nome do Participante 2",
+            "emailParticipante": "participante2@exemplo.com"
+        },
+        {
+            "idParticipante": "33333",
+            "nomeParticipante": "Nome do Participante 3",
+            "emailParticipante": "participante3@exemplo.com"
+        }
+    ]
+}
+
+
+### Deletar um Evento
+DELETE http://localhost:8080/evento/1
+Content-Type: application/json

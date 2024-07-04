@@ -2,11 +2,11 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Spring Boot-AutostockApplication<Autostock>",
+      "name": "Spring Boot-ativamenteApplication<ativamente>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "mainClass": "br.univille.AutostockApplication",
-      "projectName": "Autostock",
+      "mainClass": "br.univille.ativamenteApplication",
+      "projectName": "ativamente",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     },
@@ -17,6 +17,16 @@
       "cwd": "${workspaceFolder}",
       "mainClass": "br.univille.MiaudotaApplication",
       "projectName": "miaudota",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-AtivamenteApplication<ativamente>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "br.univille.AtivamenteApplication",
+      "projectName": "ativamente",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     }
