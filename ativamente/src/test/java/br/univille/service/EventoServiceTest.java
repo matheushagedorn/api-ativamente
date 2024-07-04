@@ -25,11 +25,11 @@ public class EventoServiceTest {
     @Test
     public void testSalvarEvento() {
         Evento Evento = new Evento();
-        Evento.setnome("c3");
+        Evento.setNome("c3");
         when(EventoRepository.save(any(Evento.class))).thenReturn(Evento);
 
         Evento savedEvento = EventoService.salvarEvento(Evento);
-        assertEquals("c3", savedEvento.getnome());
+        assertEquals("c3", savedEvento.getNome());
     }
 
     @Test

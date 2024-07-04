@@ -4,11 +4,13 @@ import br.univille.model.Evento;
 import br.univille.repository.EventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@CrossOrigin(origins = "http://localhost:5173")
 public class EventoService {
 
     @Autowired
@@ -32,12 +34,12 @@ public class EventoService {
 
     public Evento atualizarEvento(Long id, Evento EventoAtualizado) {
         return EventoRepository.findById(id).map(Evento -> {
-            Evento.setnome(EventoAtualizado.getnome());
+            Evento.setNome(EventoAtualizado.getNome());
             Evento.setData(EventoAtualizado.getData());
-            Evento.setdescricao(EventoAtualizado.getdescricao());
-            Evento.sethora(EventoAtualizado.gethora());
-            Evento.setvalor(EventoAtualizado.getvalor());
-            Evento.setstatus(EventoAtualizado.getstatus());
+            Evento.setDescricao(EventoAtualizado.getDescricao());
+            Evento.setHora(EventoAtualizado.getHora());
+            Evento.setValor(EventoAtualizado.getValor());
+            Evento.setStatus(EventoAtualizado.getStatus());
             return EventoRepository.save(Evento);
         }).orElseGet(() -> {
             EventoAtualizado.setId(id);
